@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9376E1EF25DF847300A8D415 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376E1EE25DF847300A8D415 /* main.swift */; };
+		9376E1F825DF848D00A8D415 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 9376E1F725DF848D00A8D415 /* ArgumentParser */; };
+		9376E21225E0017200A8D415 /* RandomWordKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9376E21125E0017200A8D415 /* RandomWordKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9376E1EB25DF847300A8D415 /* RandomWord */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RandomWord; sourceTree = BUILT_PRODUCTS_DIR; };
+		9376E1EB25DF847300A8D415 /* random-word */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "random-word"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9376E1EE25DF847300A8D415 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9376E20F25E0015600A8D415 /* RandomWordKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RandomWordKit; sourceTree = "<group>"; };
+		9376E21525E0029C00A8D415 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9376E21225E0017200A8D415 /* RandomWordKit in Frameworks */,
+				9376E1F825DF848D00A8D415 /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,33 +47,43 @@
 		9376E1E225DF847200A8D415 = {
 			isa = PBXGroup;
 			children = (
-				9376E1ED25DF847300A8D415 /* RandomWord */,
+				9376E21525E0029C00A8D415 /* README.md */,
+				9376E20F25E0015600A8D415 /* RandomWordKit */,
+				9376E1ED25DF847300A8D415 /* RandomWordTool */,
 				9376E1EC25DF847300A8D415 /* Products */,
+				9376E1FC25DF84C800A8D415 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		9376E1EC25DF847300A8D415 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9376E1EB25DF847300A8D415 /* RandomWord */,
+				9376E1EB25DF847300A8D415 /* random-word */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9376E1ED25DF847300A8D415 /* RandomWord */ = {
+		9376E1ED25DF847300A8D415 /* RandomWordTool */ = {
 			isa = PBXGroup;
 			children = (
 				9376E1EE25DF847300A8D415 /* main.swift */,
 			);
-			path = RandomWord;
+			path = RandomWordTool;
+			sourceTree = "<group>";
+		};
+		9376E1FC25DF84C800A8D415 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9376E1EA25DF847200A8D415 /* RandomWord */ = {
+		9376E1EA25DF847200A8D415 /* random-word */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9376E1F225DF847300A8D415 /* Build configuration list for PBXNativeTarget "RandomWord" */;
+			buildConfigurationList = 9376E1F225DF847300A8D415 /* Build configuration list for PBXNativeTarget "random-word" */;
 			buildPhases = (
 				9376E1E725DF847200A8D415 /* Sources */,
 				9376E1E825DF847200A8D415 /* Frameworks */,
@@ -77,9 +93,13 @@
 			);
 			dependencies = (
 			);
-			name = RandomWord;
+			name = "random-word";
+			packageProductDependencies = (
+				9376E1F725DF848D00A8D415 /* ArgumentParser */,
+				9376E21125E0017200A8D415 /* RandomWordKit */,
+			);
 			productName = RandomWord;
-			productReference = 9376E1EB25DF847300A8D415 /* RandomWord */;
+			productReference = 9376E1EB25DF847300A8D415 /* random-word */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -105,11 +125,14 @@
 				Base,
 			);
 			mainGroup = 9376E1E225DF847200A8D415;
+			packageReferences = (
+				9376E1F625DF848D00A8D415 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = 9376E1EC25DF847300A8D415 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9376E1EA25DF847200A8D415 /* RandomWord */,
+				9376E1EA25DF847200A8D415 /* random-word */,
 			);
 		};
 /* End PBXProject section */
@@ -275,7 +298,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9376E1F225DF847300A8D415 /* Build configuration list for PBXNativeTarget "RandomWord" */ = {
+		9376E1F225DF847300A8D415 /* Build configuration list for PBXNativeTarget "random-word" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9376E1F325DF847300A8D415 /* Debug */,
@@ -285,6 +308,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9376E1F625DF848D00A8D415 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9376E1F725DF848D00A8D415 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9376E1F625DF848D00A8D415 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		9376E21125E0017200A8D415 /* RandomWordKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RandomWordKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9376E1E325DF847200A8D415 /* Project object */;
 }
