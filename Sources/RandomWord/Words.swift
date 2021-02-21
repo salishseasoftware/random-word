@@ -1,6 +1,6 @@
 import Foundation
 
-public struct WordsFile {
+public struct Words {
     let words: [String]
 
     public init(path: String) throws {
@@ -15,7 +15,8 @@ public struct WordsFile {
             guard let word = words.randomElement() else { return }
             randomWords.append(transformer.transform(word))
         }
-        
+
         return randomWords
     }
 }
+

@@ -1,6 +1,6 @@
 import Foundation
 import ArgumentParser
-import RandomWordKit
+import RandomWord
 
 extension Transformer: ExpressibleByArgument {}
 
@@ -18,7 +18,7 @@ struct RandomWord: ParsableCommand {
     var transformer: Transformer = .none
 
     mutating func run() throws {
-        let wordsFile = try WordsFile(path: file)
+        let wordsFile = try Words(path: file)
         let words = wordsFile.random(count: count, transformer: transformer)
         print(words.joined(separator: separator))
     }
