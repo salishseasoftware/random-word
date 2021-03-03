@@ -45,14 +45,32 @@ UNDERCOMMENT-DUNGHILLY-TRAMAL
 
 ### Installation
 
-#### Shell
+There are mutiple ways to install
+
+#### Manually
+
+Clone the repo then you can use any one of the follwoiing options: 
+
+##### Makefile 
+
+Install using the Makefile 
+
+```
+$ make install
+```
+
+##### Swift 
+
+Installing with swift 
 
 ```
 $ swift build -c release
 $ cp .build/release/random-word /usr/local/bin/random-word
 ```
 
-#### Xcode
+##### Xcode
+
+Installing in Xcode
 
 Generate the xcode project:
 
@@ -61,7 +79,7 @@ $ swift package generate-xcodeproj
 $ open ./random-word.xcodeproj
 ```
 
-Then in Xcode:
+In Xcode:
 
 1. Product > Archive
 1. Distribute Content
