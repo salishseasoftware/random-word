@@ -6,9 +6,9 @@ Yet another random word generator
 
 A command line tool for Mac OS.
 
-By default it uses the words in `/usr/share/dict/words`.  You can provide your own list of words as a text file with each word on a spearate line.
+By default it uses the words in `/usr/share/dict/words`.  You can provide your own list of words as a text file with each word on a separate line.
 
-You can compose a string made of mutiple words by specifying a count, and optionally a custom separator to use.
+You can compose a string made of multiple words by specifying a count, and optionally a custom separator to use.
 
 The words can be transformed to UPPERCASE, lowercase, or Capitalized.
 
@@ -45,34 +45,32 @@ UNDERCOMMENT-DUNGHILLY-TRAMAL
 
 ### Installation
 
-There are mutiple ways to install
+
+#### With [`Mint`](https://github.com/yonaskolb/Mint)
+
+```sh
+$ mint install salishseasoftware/random-word
+```
+
 
 #### Manually
 
-Clone the repo then you can use any one of the follwoiing options: 
-
-##### Makefile 
-
-Install using the Makefile 
+Clone the repo then:
 
 ```
 $ make install
 ```
 
-##### Swift 
-
-Installing with swift 
+Or using swift itself:
 
 ```
 $ swift build -c release
 $ cp .build/release/random-word /usr/local/bin/random-word
 ```
 
-##### Xcode
+#### With Xcode
 
-Installing in Xcode
-
-Generate the xcode project:
+Generate the Xcode project:
 
 ```
 $ swift package generate-xcodeproj
